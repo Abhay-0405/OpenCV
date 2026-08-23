@@ -1,0 +1,11 @@
+import cv2
+
+img = cv2.imread("virat.jpg", cv2.IMREAD_GRAYSCALE)
+
+edges = cv2.Canny(img, 50, 250)
+
+cv2.imshow("Original Image", img)
+cv2.imshow("Edges", edges)
+cv2.imwrite("virat_canny.jpg",edges)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
